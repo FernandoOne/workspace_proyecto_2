@@ -1,0 +1,1 @@
+En este proyecto se inició con CubeMX con los periféricos especificados en la hoja. Luego se probó todos los periféricos, funcionan bien. Luego se conectó la placa MPU9250 y se probó con el código provisto por Mohamed, funciona bien.

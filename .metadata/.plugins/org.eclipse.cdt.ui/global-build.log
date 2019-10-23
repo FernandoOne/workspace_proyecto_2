@@ -1,0 +1,23 @@
+21:23:18 **** Incremental Build of configuration Debug for project Proyecto_2 ****
+make all 
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+D:\System_Workbench_workspaces\workspace_proyecto_2\Proyecto_2\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -I"D:/System_Workbench_workspaces/workspace_proyecto_2/Proyecto_2/Inc" -I"D:/System_Workbench_workspaces/workspace_proyecto_2/Proyecto_2/Drivers/STM32F4xx_HAL_Driver/Inc" -I"D:/System_Workbench_workspaces/workspace_proyecto_2/Proyecto_2/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"D:/System_Workbench_workspaces/workspace_proyecto_2/Proyecto_2/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"D:/System_Workbench_workspaces/workspace_proyecto_2/Proyecto_2/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"D:/System_Workbench_workspaces/workspace_proyecto_2/Proyecto_2/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/System_Workbench_workspaces/workspace_proyecto_2/Proyecto_2/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+../Src/main.c:344:13: warning: 'MX_TIM2_Init' defined but not used [-Wunused-function]
+ static void MX_TIM2_Init(void)
+             ^~~~~~~~~~~~
+Finished building: ../Src/main.c
+ 
+Building target: Proyecto_2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F407VGTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Proyecto_2.elf" @"objects.list"   -lm
+Finished building target: Proyecto_2.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Proyecto_2.elf" "Proyecto_2.hex"
+arm-none-eabi-size "Proyecto_2.elf"
+   text	   data	    bss	    dec	    hex	filename
+  17828	    488	  31312	  49628	   c1dc	Proyecto_2.elf
+ 
